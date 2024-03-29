@@ -85,6 +85,42 @@
 |	3	|	void *insert(const char *src, const char *str, size_t start_index)	|	Returns a new string in which a specified string (str) is inserted at a specified index position (start_index) in the given string (src). In case of any error, return NULL.	|
 |	4	|	void *trim(const char *src, const char *trim_chars)	|	Returns a new string in which all leading and trailing occurrences of a set of specified characters (trim_chars) from the given string (src) are removed. In case of any error, return NULL.	|
 
+### Requirements:
+### Part 1
+It is necessary to implement the described above functions of the string.h library:
 
+* The library must be developed in C language of C11 standard using gcc compiler;
+* The library's code, including headers, makefile and library itself must be located in the src folder on the develop branch;
+* Do not use outdated and legacy language constructions and library functions. Pay attention to the legacy and obsolete marks in the official documentation on the language and the libraries used. Use the POSIX.1-2017 standard;
+* When writing code it is necessary to follow the Google style;
+* Make it as a static library named s21_string.a (with the header file s21_string.h);
+* The library must be developed in accordance with the principles of structured programming, duplication in the code must be avoided;
+* Prepare a full coverage of the library's functions by unit-tests using the Check library;
+* Test's code and the executable file must be located in the src folder or its any subfolder;
+* Unit-tests must check the results of your implementation by comparing them with the implementation of the standard string.h library;
+* Unit tests must cover at least 80% of each function (checked using gcov);
+* Provide a Makefile for building the library and tests (with the targets all, clean, test, s21_string.a, gcov_report);
+* The gcov_report target should generate a gcov report in the form of an html page. Unit tests must be run with gcov flags to do this;
+* Use prefix s21_ before each function;
+* It is forbidden to copy the implementation of the standard string.h library and other string processing libraries and to use them anywhere, except unit-tests;
+* It is forbidden to use system errors arrays, including those not specified in POSIX (sys_nerr, sys_errlist). Instead, you need to implement your own platform-specific errors arrays, as it was mentioned in the description of the strerror function;
+* You must follow the logic of the standard string.h library (in terms of checks, working with memory and behavior in emergency situations - tests will help you with that);
+* Functions must work with z-string made of single-byte characters in ASCII encoding.
 		
-		
+### Part 2
+It is necessary to implement the sprintf function from the stdio.h library:
+
+* The function must be placed in the s21_string.h library;
+* All of the requirements outlined in the first part are applied to function implementation;
+* The next partial formatting must be supported:
+	* Specifiers: c, d, f, s, u, %
+	* Flags: -, +, (space)
+	* Width description: (number)
+	* Precision description: .(number)
+	* Length description: h, l
+
+### Part 5. Bonus
+Bonus assignment for extra points. You need to implement some string processing functions from the String class (described here):
+
+* The functions must be placed in the s21_string.h library;
+* All of the requirements outlined in the first part are applied to functions implementation; excluding the requirement to compare your implementation with the standard.
