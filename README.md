@@ -1,6 +1,7 @@
+# s21_string
 > [!NOTE]
 > C language
-## Implementation of the string.h library with additions.
+## Implementation of the string.h library with additions
 
 ### string.h Types
 | No. | Variable | Description |
